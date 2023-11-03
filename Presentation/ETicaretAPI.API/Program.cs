@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ETicaretAPIContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"));
-});
+}, ServiceLifetime.Singleton);
 
 builder.Services.AddPersistanceServices();
 builder.Services.AddControllers();
