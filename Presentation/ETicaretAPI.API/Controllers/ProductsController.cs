@@ -18,7 +18,7 @@ namespace ETicaretAPI.API.Controllers
         [HttpGet]
         public async Task<IActionResult> GetProduct()
         {
-            return Ok("productss");
+            return Ok();
         }
     }
 }
